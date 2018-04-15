@@ -1,0 +1,22 @@
+# Identifier, Number of tiles: description
+# '*' for the starting tile
+# R/oads, G/raveyards, C/ities
+A, 4: G
+B, 2: G, R(S)
+C, 1: C(NESW)
+D, 4: C(NES)
+E, 3: C(NES), R(W)
+F, 5: C(NE)
+G, 5: C(NE), R(SW)
+H, 3: C(NS)
+I, 2: C(N|E)
+J, 3: C(N|S)
+K, 5: C(S)
+L, 3: C(S), R(EN)
+M, 3: C(S), R(WN)
+N, 3: C(S), R(N|E|W)
+O, 4: C(N), R(EW)
+P*, 8: R(NS)
+Q, 9: R(NE)
+R, 4: R(N|E|W)
+S, 1: R(N|E|S|W)
