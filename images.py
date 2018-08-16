@@ -13,7 +13,7 @@ class Image:
     def draw(self, location, orientation=0):
         # TODO: May speed it up if we only use .rotate if orientation set
         g.screen.blit(
-            pygame.transform.rotate(self.image, orientation * 90),
+            pygame.transform.rotate(self.image, orientation * -90),
             location
         )
 
@@ -46,6 +46,12 @@ class ImageCollection:
                     path='{}{}.png'.format(path, colour),
                     size=settings.worker_size
                 )
+
+        for postfix in 'dark', 'light':
+            self.images['background_{}'.format(postfix)] = Image(
+                path='{}background_{}.png'.format(settings.background_path, postfix),
+                size=settings.tiles_area_size
+            )
 
 
 g.images = ImageCollection()
